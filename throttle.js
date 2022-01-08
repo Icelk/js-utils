@@ -4,6 +4,10 @@
 let instances = {}
 
 /**
+ * Throttles calling `callback` to every `interval` milliseconds.
+ * If more than one event is supplied in the hang period, only the last is emitted.
+ * If a event is emitted in the hang period, that is given to `callback` after the timeout.
+ *
  * @param {Event} ev
  * @param {string} name
  * @param {number} interval
