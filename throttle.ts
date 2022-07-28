@@ -1,7 +1,4 @@
-/**
- * @type { {[name: string]: {backlog: Event[], inTimeout: boolean}} }
- */
-let instances = {}
+let instances: { [name: string]: { backlog: (() => void)[]; inTimeout: boolean } } = {}
 
 /**
  * Throttles calling `callback` to every `interval` milliseconds.
@@ -9,12 +6,8 @@ let instances = {}
  *
  * If it's called once, which calls the callback, and then once again, it waits `interval` before
  * calling `callback` again.
- *
- * @param {string} name
- * @param {number} interval
- * @param {(Event) => void} callback
  */
-function throttle(name, interval, callback) {
+export default function throttle(name: string, interval: number, callback: () => void) {
     if (instances[name] === undefined) {
         instances[name] = {
             backlog: [],

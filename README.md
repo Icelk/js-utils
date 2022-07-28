@@ -2,6 +2,9 @@
 
 This is a small collection of Javascript functions I occasionally use.
 
+Some [functions](#functions) are available in both old JS style (HTML script tag to include code),
+ES modules (`import throttle from "./throttle.mjs"`) and typescript.
+
 # License
 
 This is licensed under CC0 - everything's under public domain.

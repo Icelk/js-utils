@@ -14,7 +14,7 @@ let instances = {}
  * @param {number} interval
  * @param {(Event) => void} callback
  */
-function throttle(name, interval, callback) {
+export default function throttle(name, interval, callback) {
     if (instances[name] === undefined) {
         instances[name] = {
             backlog: [],
