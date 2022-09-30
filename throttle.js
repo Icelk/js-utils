@@ -12,7 +12,7 @@ let instances = {}
  *
  * @param {string} name
  * @param {number} interval
- * @param {(Event) => void} callback
+ * @param {() => void} callback
  */
 function throttle(name, interval, callback) {
     if (instances[name] === undefined) {
